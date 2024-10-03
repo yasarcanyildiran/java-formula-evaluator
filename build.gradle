@@ -3,15 +3,9 @@ plugins {
     id "org.openjfx.javafxplugin" version "0.0.13"
 }
 
-sourceCompatibility = JavaVersion.VERSION_20
-targetCompatibility = JavaVersion.VERSION_20
+sourceCompatibility = JavaVersion.VERSION_22
+targetCompatibility = JavaVersion.VERSION_22
 
-tasks.withType(JavaCompile).all {
-    options.compilerArgs += ['--enable-preview']
-}
-tasks.withType(JavaExec) {
-    jvmArgs += '--enable-preview'
-}
 
 javafx {
     version = "20.0.2"
