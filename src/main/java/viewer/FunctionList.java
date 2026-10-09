@@ -1,7 +1,9 @@
 package viewer;
 
+import formula.Addition;
 import formula.Constant;
 import formula.Formula;
+import formula.Variable;
 import javafx.scene.chart.XYChart;
 
 import java.util.ArrayList;
@@ -24,6 +26,14 @@ class FunctionList {
     Formula f = new Constant(1);
     PlottableFunction function = new PlottableFunction(f, "f");
     addFunctionAndItsDerivative(function);
+
+    Formula g = new Variable();
+    PlottableFunction functionG = new PlottableFunction(g, "g");
+    addFunctionAndItsDerivative(functionG);
+
+    Formula h = new Addition(new Variable(), new Constant(3));
+    PlottableFunction functionH = new PlottableFunction(h, "h");
+    addFunctionAndItsDerivative(functionH);
 
     // fin à modifier.
   }

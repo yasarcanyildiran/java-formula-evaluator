@@ -81,3 +81,4 @@ build/
 misc.xml
 .idea/vcs.xml
 .idea/.name
+bin/

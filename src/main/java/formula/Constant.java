@@ -5,20 +5,17 @@ public record Constant(double value) implements Formula {
 
   @Override
   public double eval(double xValue) {
-    // TODO : change the code.
-    return 0;
+    return value;
   }
 
   @Override
   public Formula derivative() {
-    // TODO : change the code.
-    return this;
+    return new Constant(0);
   }
 
   @Override
   public String toString() {
-    // TODO : change the code.
-    return "toto";
+    return String.valueOf(value);
   }
 
 
