@@ -1,19 +1,23 @@
 package formula;
 
-public record Addition(Formula left, Formula right) implements Formula {
+public final class Addition extends BinaryOperation {
+
+  public Addition(Formula left, Formula right) {
+    super(left, right);
+  }
 
   @Override
-  public double eval(double xValue) {
-    return left.eval(xValue) + right.eval(xValue);
+  protected double operate(double leftValue, double rightValue) {
+    return leftValue + rightValue;
+  }
+
+  @Override
+  protected String symbol() {
+    return "+";
   }
 
   @Override
   public Formula derivative() {
     return new Addition(left.derivative(), right.derivative());
-  }
-
-  @Override
-  public String toString() {
-    return "(" + left + " + " + right + ")";
   }
 }

@@ -43,4 +43,4 @@ Une classe implémentant `Formula` devra donc avoir trois fonctionnalités :
 
 ## Membre du projet
 
-- NOM, prénom
+- YILDIRAN, Yasar Can

@@ -1,7 +1,7 @@
 package formula;
 
 public sealed interface Formula
-  permits Constant, Variable, Addition
+  permits Constant, Variable, BinaryOperation, UnaryOperation
 {
 
   /**
